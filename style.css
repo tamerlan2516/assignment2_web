@@ -1,0 +1,208 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+    background: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+/* Task 0 */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Task 1 */
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    width: 30%;
+    padding: 15px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card button, .project button {
+    padding: 8px 15px;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 10px gray;
+}
+
+/* Task 2 */
+.layout {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 70px 180px 60px;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    border: 1px solid black;
+}
+
+.layout header {
+    grid-area: header;
+    background: lightgray;
+    padding: 20px;
+}
+
+.layout aside {
+    grid-area: sidebar;
+    background: white;
+    padding: 20px;
+}
+
+.layout main {
+    grid-area: main;
+    background: white;
+    padding: 20px;
+}
+
+.layout footer {
+    grid-area: footer;
+    background: lightgray;
+    padding: 20px;
+}
+
+/* Task 3 */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.photo {
+    position: relative;
+}
+
+.photo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    opacity: 0;
+}
+
+.photo:hover span {
+    opacity: 1;
+}
+
+/* Task 4 */
+.portfolio {
+    border: 1px solid black;
+    background: white;
+}
+
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: lightgray;
+}
+
+.portfolio-main {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.projects {
+    display: flex;
+    gap: 15px;
+}
+
+.project {
+    border: 1px solid black;
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project button {
+    margin-top: auto;
+    width: 80px;
+}
+
+.portfolio-sidebar {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.portfolio-footer {
+    padding: 20px;
+    text-align: center;
+    background: lightgray;
+}
+
+@media (max-width: 700px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-main {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+}
